@@ -7,7 +7,7 @@
 [[paper]](https://openreview.net/forum?id=xYleTh2QhS)[[arXiv]](https://arxiv.org/abs/2410.10766v1)[[project page]](https://www.youwei-yu.com/adtg-sim-to-real)
 
 
-#### Environment Setup
+### Environment Setup
 ```shell
 git clone https://github.com/youwyu/Adaptive-Diffusion-Terrain.git
 ```
@@ -24,7 +24,7 @@ cd contexts/simsense
 pip install .
 ```
 
-#### Teacher & Student Policy
+### Teacher & Student Policy
 If you wanna use wandb, change Line#119, #120 in auto_train
 ```shell
 python3 auto_train.py
@@ -38,7 +38,7 @@ Notes:
 5. If you don't want privileged knowlege and save training time and RAM, set all use_globalmap to False.
 0. We plan to release the ROS code soon. However, trained checkpoints will be planned right after the submission of our next work.
 
-#### Miscell
+### Miscell
 We understand the code is fully non-optimized as we do not care about simulation training during our bed time.
 We kindly ask you to cite our work if you leverage the code.
 ```
