@@ -1,7 +1,8 @@
 # Adaptive Diffusion Terrain Generation
 
 **[CoRL 24] Adaptive Diffusion Terrain Generation for Uneven Terrain Generation**
-Youwei Yu$^\dagger$, Junhong Xu$^\dagger$, Lantao Liu
+*Youwei Yu\*, Junhong Xu\*, Lantao Liu*
+
 [[paper]](https://openreview.net/forum?id=xYleTh2QhS)[[arXiv]](https://arxiv.org/abs/2410.10766v1)[[project page]](https://www.youwei-yu.com/adtg-sim-to-real)
 
 
@@ -15,6 +16,7 @@ git clone https://github.com/youwyu/Adaptive-Diffusion-Terrain.git
 ```
 
 2. Semi-Global Matching on GPU
+   
 Change the CUDA path in contexts/simsense/setup.py Line#35
 ```shell
 cd contexts/simsense
