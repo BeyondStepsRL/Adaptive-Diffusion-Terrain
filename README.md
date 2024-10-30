@@ -36,6 +36,7 @@ Notes:
 4. We use a single RTX 4090 with 24GB RAM. For smaller RAM, we suggest lower num_agents_per_terrain and num_agents_per_terrain_distill in cfg/base_config.
    The number can be estimated roughly as YOUR_RAM * 4.
 5. If you don't want privileged knowlege and save training time and RAM, set all use_globalmap to False.
+0. We plan to release the ROS code soon. However, trained checkpoints will be planned right after the submission of our next work.
 
 #### Miscell
 We understand the code is fully non-optimized as we do not care about simulation training during our bed time.
