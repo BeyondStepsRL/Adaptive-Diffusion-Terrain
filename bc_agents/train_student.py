@@ -92,7 +92,7 @@ def run_closed_loop(env, teacher, learner, data_path, num_episodes):
             # pred, hx = learner(encoded_obs, student_state, hx)
             # next_state, student_state, observation, reward, done, timeout = env.step(pred)
 
-            action, _, _ = teacher.evaluate(state, stochastic=False)
+            action, _, _ = teacher.evaluate(next_state, stochastic=False)
             pred = action
             next_state, student_state, observation, reward, done, timeout = env.step(action)
             label = env.applied_actions ## action
