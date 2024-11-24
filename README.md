@@ -17,6 +17,7 @@ git clone https://github.com/youwyu/Adaptive-Diffusion-Terrain.git
 ```
 
 2. Semi-Global Matching on GPU
+
 Make sure the CMake version is at least 3.18, otherwise install by Kitware at https://apt.kitware.com or build from source
 ```shell
 wget https://github.com/Kitware/CMake/releases/download/v3.31.0/cmake-3.31.0.tar.gz
