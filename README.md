@@ -1,6 +1,6 @@
 # Adaptive Diffusion Terrain Generation
 
-**[CoRL 24] Adaptive Diffusion Terrain Generation for Uneven Terrain Generation**
+**[CoRL 24] Adaptive Diffusion Terrain Generation for Autonomous Uneven Terrain Navigation**
 
 *Youwei Yu\*, Junhong Xu\*, Lantao Liu*
 
@@ -17,7 +17,16 @@ git clone https://github.com/youwyu/Adaptive-Diffusion-Terrain.git
 ```
 
 2. Semi-Global Matching on GPU
-   
+Make sure the CMake version is at least 3.18, otherwise install by Kitware at https://apt.kitware.com or build from source
+```shell
+wget https://github.com/Kitware/CMake/releases/download/v3.31.0/cmake-3.31.0.tar.gz
+tar -xvf cmake-3.31.0.tar.gz
+cd cmake-3.31.0
+./configure
+make
+sudo make install
+```
+
 Change the CUDA path in contexts/simsense/setup.py Line#35
 ```shell
 cd contexts/simsense
