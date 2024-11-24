@@ -30,8 +30,7 @@ sudo make install
 
 Change the CUDA path in contexts/simsense/setup.py Line#35
 ```shell
-cd contexts/simsense
-pip install .
+pip install -e contexts/simsense
 ```
 
 ### Teacher & Student Policy
