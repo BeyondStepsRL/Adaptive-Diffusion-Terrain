@@ -207,9 +207,9 @@ def train():
             mask = torch.zeros_like(success_rates, dtype=torch.bool)
             mask[env_ids_with_ended_episodes] = True
             S_masked = success_rates * mask.float()
-            S_masked = S_masked.view(cfg.env.num_agents_per_terrain, -1)
+            S_masked = S_masked.view(-1, cfg.env.num_agents_per_terrain)
             envs_success_rate = S_masked.sum(dim=1) / \
-            (mask.view(cfg.env.num_agents_per_terrain, -1).sum(dim=1).clamp(min=1))
+            (mask.view(-1, cfg.env.num_agents_per_terrain).sum(dim=1).clamp(min=1))
             envs_success_rate = envs_success_rate.view(-1).cpu().numpy()
 
             terrain_context.update(envs_success_rate, terrain_context.epoch)
