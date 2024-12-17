@@ -52,7 +52,7 @@ def play():
         
         for itr in range(10):
 
-            state = env.reset(None, reset_pos)
+            state = env.reset(None)
             
             while True:
                 action, _, _ = actor_critic_net.evaluate(state, stochastic=False)
