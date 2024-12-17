@@ -2,16 +2,16 @@
 
 **[CoRL 24] Adaptive Diffusion Terrain Generation for Autonomous Uneven Terrain Navigation**
 
-*Youwei Yu\*, Junhong Xu\*, Lantao Liu*
+*[Youwei Yu\*](https://www.youwei-yu.com), [Junhong Xu\*](https://junhongxu.github.io), [Lantao Liu](https://vail.sice.indiana.edu/pages/lantaoliu.html)*
 
-[[paper]](https://openreview.net/forum?id=xYleTh2QhS)[[arXiv]](https://arxiv.org/abs/2410.10766v1)[[project page]](https://www.youwei-yu.com/adtg-sim-to-real)
+[[paper]](https://openreview.net/forum?id=xYleTh2QhS) [[arXiv]](https://arxiv.org/abs/2410.10766v1) [[project page]](https://www.youwei-yu.com/adtg-sim-to-real)
 
 
 ### Environment Setup
 ```shell
 git clone https://github.com/youwyu/Adaptive-Diffusion-Terrain.git
 ```
-1. Isaac Gym, DDPM, Python3.8-dev (Make sure you have mini/ana conda installed)
+1. Isaac Gym, DDPM, Python3.8-dev (Make sure you have mini/ana-conda installed)
 ```shell
 . install.sh  ## Make sure using . rather than bash or sh install.sh
 ```
@@ -39,17 +39,16 @@ If you wanna use wandb, change Line#119, #120 in auto_train
 python3 auto_train.py
 ```
 Notes:
-1. Terrain context will auto save as json file.
+1. Terrain context will auto-save as json file.
 2. Teacher: specify the file to load the checkpoint, o.w. it will train from 0.
-3. Student: it will auto find the json, or user specify json path. o.w. the program return 1.
+3. Student: it will auto-find the json, or the user will specify json path. o.w. the program returns 1.
 4. We use a single RTX 4090 with 24GB RAM. For smaller RAM, we suggest lower num_agents_per_terrain and num_agents_per_terrain_distill in cfg/base_config.
    The number can be estimated roughly as YOUR_RAM * 4.
-5. If you don't want privileged knowlege and save training time and RAM, set all use_globalmap to False.
+5. If you don't want privileged knowledge and save training time and RAM, set all use_globalmap to False.
 0. We plan to release the ROS code soon. However, trained checkpoints will be planned right after the submission of our next work.
 
 ### Miscell
-We understand the code is fully non-optimized as we do not care about simulation training during our bed time.
-We kindly ask you to cite our work if you leverage the code.
+Feel free to email us at youwyu@iu.edu to plan Zoom concerning brainstorms.
 ```
 @inproceedings{
    yu2024adaptive,
