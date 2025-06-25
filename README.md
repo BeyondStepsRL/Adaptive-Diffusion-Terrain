@@ -1,11 +1,20 @@
 # Adaptive Diffusion Terrain Generation
 
+**[RSS 25 ROAR] ADEPT: Adaptive Diffusion Environment for Policy Transfer Sim-to-Real**
+
+[[paper]](https://openreview.net/forum?id=tdgQT1SynU) [[arXiv]](https://arxiv.org/abs/2506.01759)
+
 **[CoRL 24] Adaptive Diffusion Terrain Generation for Autonomous Uneven Terrain Navigation**
+
+[[paper]](https://openreview.net/forum?id=xYleTh2QhS) [[arXiv]](https://arxiv.org/abs/2410.10766v1)
 
 *[Youwei Yu\*](https://www.youwei-yu.com), [Junhong Xu\*](https://junhongxu.github.io), [Lantao Liu](https://vail.sice.indiana.edu/pages/lantaoliu.html)*
 
-[[paper]](https://openreview.net/forum?id=xYleTh2QhS) [[arXiv]](https://arxiv.org/abs/2410.10766v1) [[project page]](https://www.youwei-yu.com/adtg-sim-to-real)
+[[project page]](https://www.youwei-yu.com/adtg-sim-to-real)
 
+### TODO
+- [ ] Add consistency diffusion-based 3D wild environment generation
+- [ ] Add standalone code of environment generation for Isaac Gym, Isaac Lab, Mujoco Playground, and Gazebo
 
 ### Environment Setup
 ```shell
@@ -39,17 +48,24 @@ If you wanna use wandb, change Line#119, #120 in auto_train
 python3 auto_train.py
 ```
 Notes:
-1. Terrain context will auto-save as json file.
-2. Teacher: specify the file to load the checkpoint, o.w. it will train from 0.
-3. Student: it will auto-find the json, or the user will specify json path. o.w. the program returns 1.
-4. We use a single RTX 4090 with 24GB RAM. For smaller RAM, we suggest lower num_agents_per_terrain and num_agents_per_terrain_distill in cfg/base_config.
+- Terrain context will auto-save as json file.
+- Teacher: specify the file to load the checkpoint, o.w. it will train from 0.
+- Student: it will auto-find the json, or the user will specify json path. o.w. the program returns 1.
+- We use a single RTX 4090 with 24GB RAM. For smaller RAM, we suggest lower num_agents_per_terrain and num_agents_per_terrain_distill in cfg/base_config.
    The number can be estimated roughly as YOUR_RAM * 4.
-5. If you don't want privileged knowledge and save training time and RAM, set all use_globalmap to False.
-0. We plan to release the ROS code soon. However, trained checkpoints will be planned right after the submission of our next work.
+- If you don't want privileged knowledge and save training time and RAM, set all use_globalmap to False.
 
 ### Miscell
-Feel free to email us at youwyu@iu.edu to plan Zoom concerning brainstorms.
+Please consider cite our work if it helps your sim-to-real training.
 ```
+@inproceedings{
+yu2025adept,
+   title={\href{https://openreview.net/forum?id=tdgQT1SynU}{{ADEPT}: Adaptive Diffusion Environment for Policy Transfer Sim-to-Real}},
+   author={Youwei Yu and Junhong Xu and Lantao Liu},
+   booktitle={RSS 2025 Workshop on Resilient Off-road Autonomous Robotics},
+   year={2025}
+}
+
 @inproceedings{
    yu2024adaptive,
    title={\href{https://openreview.net/forum?id=xYleTh2QhS}{Adaptive Diffusion Terrain Generator for Autonomous Uneven Terrain Navigation}},
